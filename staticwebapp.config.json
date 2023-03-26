@@ -5,17 +5,17 @@
     },
     "routes": [
       {
-        "route":"/data",
-        "redirect":"/contacto",
-        "statusCode": 301
+        "route": "/contacto",
+        "allowedRoles": ["authenticated"]
       },
       {
         "route": "/api/*",
         "allowedRoles": ["authenticated"]
-      },
+      },     
       {
-        "route": "/contacto",
-        "allowedRoles": ["authenticated"]
+        "route":"/data",
+        "redirect":"/contacto",
+        "statusCode": 301
       }
 
     ]
